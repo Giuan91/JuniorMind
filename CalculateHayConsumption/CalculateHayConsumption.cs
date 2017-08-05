@@ -9,13 +9,14 @@ namespace CalculateHayConsumption
         [TestMethod]
         public void HayConsumptionForOneDay()
         {
-            int kilogramsOfHay = CalculateKilogramsOfHayConsumed(1, 10, 100);
-            Assert.AreEqual(0, kilogramsOfHay);
+            int kilogramsOfHay = CalculateKilogramsOfHayConsumed(10, 10);
+            Assert.AreEqual(100, kilogramsOfHay);
         }
 
-        int CalculateKilogramsOfHayConsumed(int numberOfDays, int numberOfGoats, int kilogramsOfHay)
+        int CalculateKilogramsOfHayConsumed(int numberOfDays, int numberOfGoats)
         {
-            return 0;
+            int kilogramsOfHay = numberOfDays * numberOfGoats;
+            return kilogramsOfHay;
         }
     }
 }
