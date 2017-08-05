@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateRedMushrooms", "CalculateRedMushrooms\CalculateRedMushrooms.csproj", "{F3B44841-B467-4816-921E-DFE01F060A34}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateHayConsumption", "CalculateHayConsumption\CalculateHayConsumption.csproj", "{B877B830-786C-4B65-A16D-D18E292901C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F3B44841-B467-4816-921E-DFE01F060A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3B44841-B467-4816-921E-DFE01F060A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3B44841-B467-4816-921E-DFE01F060A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3B44841-B467-4816-921E-DFE01F060A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B877B830-786C-4B65-A16D-D18E292901C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B877B830-786C-4B65-A16D-D18E292901C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B877B830-786C-4B65-A16D-D18E292901C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B877B830-786C-4B65-A16D-D18E292901C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
