@@ -13,6 +13,12 @@ namespace CalculatePavementNeeds
             Assert.AreEqual(4.0m, numberOfTilesNeeded);
         }
 
+        [TestMethod]
+        public void TestForEightbySevenSurface()
+        {
+            int numberOfTilesNeeded = CalculatePavementNeeds(8, 7, 2, 2);
+            Assert.AreEqual(16.0m, numberOfTilesNeeded);
+        }
         int CalculatePavementNeeds (int surfaceLenght, int surfaceWidth, int pavementPieceLenght, int pavementPieceWidth)
         {
             int lenghtNeed = surfaceLenght / pavementPieceLenght;
