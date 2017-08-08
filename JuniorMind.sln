@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculateHayConsumption", "CalculateHayConsumption\CalculateHayConsumption.csproj", "{B877B830-786C-4B65-A16D-D18E292901C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatePavement", "CalculatePavement\CalculatePavement.csproj", "{FCCA31B5-9BC0-4946-ADA5-9906794DBC7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B877B830-786C-4B65-A16D-D18E292901C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B877B830-786C-4B65-A16D-D18E292901C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B877B830-786C-4B65-A16D-D18E292901C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B877B830-786C-4B65-A16D-D18E292901C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCCA31B5-9BC0-4946-ADA5-9906794DBC7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCA31B5-9BC0-4946-ADA5-9906794DBC7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCCA31B5-9BC0-4946-ADA5-9906794DBC7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCCA31B5-9BC0-4946-ADA5-9906794DBC7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

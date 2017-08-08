@@ -7,16 +7,23 @@ namespace CalculateHayConsumption
     public class CalculateHayConsumption
     {
         [TestMethod]
-        public void HayConsumptionForOneDay()
+        public void HayConsumptionForTenDay()
         {
-            int kilogramsOfHay = CalculateKilogramsOfHayConsumed(10, 10);
+            int kilogramsOfHay = CalculateKilogramsOfHayConsumed(10, 10, 100);
             Assert.AreEqual(100, kilogramsOfHay);
         }
 
-        int CalculateKilogramsOfHayConsumed(int numberOfDays, int numberOfGoats)
+        [TestMethod]
+        public void HayConsumptionForThirtyDay()
         {
-            int kilogramsOfHay = numberOfDays * numberOfGoats;
-            return kilogramsOfHay;
+            int kilogramsOfHay = CalculateKilogramsOfHayConsumed(30, 30, 900);
+            Assert.AreEqual(900, kilogramsOfHay);
+        }
+
+        int CalculateKilogramsOfHayConsumed(int numberOfDays, int numberOfGoats, int totalKilogramsOfHay)
+        {
+            int kilogramsOfHayPerGoatPerDay = totalKilogramsOfHay / numberOfGoats / numberOfDays ;
+            return kilogramsOfHayPerGoatPerDay * numberOfGoats * numberOfDays;
         }
     }
 }
