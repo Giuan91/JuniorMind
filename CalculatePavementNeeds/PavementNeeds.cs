@@ -9,30 +9,24 @@ namespace CalculatePavementNeeds
         [TestMethod]
         public void TestForSixBySixSurface()
         {
-            decimal numberOfTilesNeeded = CalculatePavementNeeds(6, 6, 4, 4);
+            int numberOfTilesNeeded = CalculatePavementNeeds(6, 6, 4, 4);
             Assert.AreEqual(4.0m, numberOfTilesNeeded);
         }
 
         int CalculatePavementNeeds (int surfaceLenght, int surfaceWidth, int pavementPieceLenght, int pavementPieceWidth)
         {
-            int lenghtNeed;
+            int lenghtNeed = surfaceLenght / pavementPieceLenght;
             if (surfaceLenght % pavementPieceLenght != 0)
                 {
-                    lenghtNeed = surfaceLenght / pavementPieceLenght + pavementPieceLenght;
-            }else
-            {
-                lenghtNeed = surfaceLenght / pavementPieceLenght;
+                    lenghtNeed += 1;
             }
 
-            int widthtNeed;
+            int widthtNeed = surfaceWidth / pavementPieceWidth;
             if (surfaceWidth % pavementPieceLenght != 0)
             {
-                widthtNeed = surfaceWidth / pavementPieceWidth + pavementPieceWidth;
+                widthtNeed += 1;
             }
-            else
-            {
-                widthtNeed = surfaceWidth / pavementPieceWidth;
-            }
+            
             return lenghtNeed * widthtNeed;
         }
     }
