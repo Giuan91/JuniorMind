@@ -18,6 +18,12 @@ namespace RentPaymentAndPenalties
             Assert.AreEqual(175, PenaltiesCalculator(100, 15));
         }
 
+        [TestMethod]
+        public void OverdueFortherThirtyFiveDays()
+        {
+            Assert.AreEqual(450, PenaltiesCalculator(100, 35));
+        }
+
         decimal PenaltiesCalculator(int rentPerMonth, int numberOfDaysOverdue)
         {
             decimal rentPlusPenalty = rentPerMonth;
