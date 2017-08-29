@@ -15,22 +15,23 @@ namespace RentPaymentAndPenalties
         decimal PenaltiesCalculator(int rentPerMonth, int numberOfDaysOverdue)
         {
             decimal rentPlusPenalty = rentPerMonth;
+            decimal rentPenaltyPerDay = 0;
             
                 if (1 <= numberOfDaysOverdue && numberOfDaysOverdue < 11)
                 {
-                    rentPlusPenalty = ((2 * rentPerMonth / 100) * numberOfDaysOverdue) + rentPerMonth;
+                    rentPenaltyPerDay = (2 * rentPerMonth / 100);
                    
                 } else if (11 <= numberOfDaysOverdue && numberOfDaysOverdue < 31)
                 {
-                    rentPlusPenalty = ((5 * rentPerMonth / 100) * numberOfDaysOverdue) + rentPerMonth;
+                    rentPenaltyPerDay = (5 * rentPerMonth / 100);
 
                 } else if (31 <= numberOfDaysOverdue && numberOfDaysOverdue < 41)
                 {
-                    rentPlusPenalty = ((10 * rentPerMonth / 100) * numberOfDaysOverdue) + rentPerMonth;
+                    rentPenaltyPerDay = (10 * rentPerMonth / 100) ;
                 }
 
 
-            return rentPlusPenalty; 
+            return rentPlusPenalty = (rentPenaltyPerDay * numberOfDaysOverdue) + rentPerMonth; 
         }
            
     }
