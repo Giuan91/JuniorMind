@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace OldMcDonaldsFarm
 {
     [TestClass]
-    public class UnitTest1
+    public class AreaCalculator
     {
         [TestMethod]
         public void TestMethod1()
