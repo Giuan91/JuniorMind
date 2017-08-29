@@ -76,19 +76,32 @@ namespace RomanNumeralsConverter
 
         string NumberConverter(int numberToBeConverted)
         {
-            if (numberToBeConverted < 0 || numberToBeConverted > 100) throw new ArgumentOutOfRangeException("Out of bounds");
-            if (numberToBeConverted < 1) return string.Empty;
-            if (numberToBeConverted == 100) return "C" + NumberConverter(numberToBeConverted - 100);
-            if (numberToBeConverted >= 90) return "XC" + NumberConverter(numberToBeConverted - 90);
-            if (numberToBeConverted >= 50) return "L" + NumberConverter(numberToBeConverted - 50);
-            if (numberToBeConverted >= 40) return "XL" + NumberConverter(numberToBeConverted - 40);
-            if (numberToBeConverted >= 10) return "X" + NumberConverter(numberToBeConverted - 10);
-            if (numberToBeConverted >= 9) return "IX" + NumberConverter(numberToBeConverted - 9);
-            if (numberToBeConverted >= 5) return "V" + NumberConverter(numberToBeConverted - 5);
-            if (numberToBeConverted >= 4) return "IV" + NumberConverter(numberToBeConverted - 4);
-            if (numberToBeConverted >= 1) return "I" + NumberConverter(numberToBeConverted - 1);
-            throw new ArgumentOutOfRangeException("Out Of bounds");
-            
+            /*  if (numberToBeConverted < 0 || numberToBeConverted > 100) throw new ArgumentOutOfRangeException("Out of bounds");
+              if (numberToBeConverted < 1) return string.Empty;
+              if (numberToBeConverted == 100) return "C" + NumberConverter(numberToBeConverted - 100);
+              if (numberToBeConverted >= 90) return "XC" + NumberConverter(numberToBeConverted - 90);
+              if (numberToBeConverted >= 50) return "L" + NumberConverter(numberToBeConverted - 50);
+              if (numberToBeConverted >= 40) return "XL" + NumberConverter(numberToBeConverted - 40);
+              if (numberToBeConverted >= 10) return "X" + NumberConverter(numberToBeConverted - 10);
+              if (numberToBeConverted >= 9) return "IX" + NumberConverter(numberToBeConverted - 9);
+              if (numberToBeConverted >= 5) return "V" + NumberConverter(numberToBeConverted - 5);
+              if (numberToBeConverted >= 4) return "IV" + NumberConverter(numberToBeConverted - 4);
+              if (numberToBeConverted >= 1) return "I" + NumberConverter(numberToBeConverted - 1);
+              throw new ArgumentOutOfRangeException("Out Of bounds");*/
+
+            var units = new string[] { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
+            var tens = new string[] { "", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
+
+            if (numberToBeConverted < 0 || numberToBeConverted > 100)
+            {
+                throw new ArgumentOutOfRangeException("Out of bounds");
+            } else {
+
+                string romanNumeral = tens[numberToBeConverted / 10] + units[numberToBeConverted % 10];
+
+                return romanNumeral; }
+
+
         }
     }
 }
