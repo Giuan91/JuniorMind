@@ -12,6 +12,14 @@ namespace OldMcDonaldsFarm
             Assert.AreEqual(592900, OldFarmCalculator(770000, 230));
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(IndexOutOfRangeException), ("Lenght is negative"))]
+        public void LenghtIsNegative()
+        {
+            AssertFailedException.Equals("Lenght is negative", OldFarmCalculator(1, 1));
+        }
+
+
         double OldFarmCalculator(int totalArea, int secondFarmWidth)
         {
 
@@ -19,25 +27,28 @@ namespace OldMcDonaldsFarm
             double deltaRoot = Math.Sqrt((secondFarmWidth * secondFarmWidth) - (4 * (-totalArea)));
             if (deltaRoot > 0)
             {
+                double initialWidthFisrtSolution = (0 - secondFarmWidth + deltaRoot) / 2;
+                double initialWidthSecondSolution = (0 - secondFarmWidth - deltaRoot) / 2;
 
-                double initialLenghtFisrtSolution = (0 - secondFarmWidth + deltaRoot) / 2;
-                double initialLenghtSecondSolution = (0 - secondFarmWidth - deltaRoot) / 2;
-
-                if (initialLenghtFisrtSolution > 0)
+                if (initialWidthFisrtSolution > 0)
                 {
-                    return initialLenghtFisrtSolution * initialLenghtFisrtSolution;
+                    return initialWidthFisrtSolution * initialWidthFisrtSolution;
                 }
                 else
                 {
-                    return initialLenghtSecondSolution * initialLenghtSecondSolution;
+                    throw new IndexOutOfRangeException("Lenght is negative");
                 }
             }
             else if (deltaRoot == 0)
             {
-                double initialLenght = (0 - secondFarmWidth) / 2;
-                return initialLenght * initialLenght;
+                double initialWidth = (-secondFarmWidth) / 2;
+                return initialWidth * initialWidth;
             }
-            else return 0;
+            else
+            {
+                return 0;
+
+            }
 
         }
     }
