@@ -16,9 +16,14 @@ namespace OldMcDonaldsFarm
         [ExpectedException(typeof(IndexOutOfRangeException), ("Lenght is negative"))]
         public void LenghtIsNegative()
         {
-            AssertFailedException.Equals("Lenght is negative", OldFarmCalculator(1, 1));
+            AssertFailedException.Equals("Lenght is negative", OldFarmCalculator(-2, 2));
         }
 
+        [TestMethod]
+        public void DeltaRootIsZero()
+        {
+            Assert.AreEqual(0, OldFarmCalculator(0, 0));
+        }
 
         double OldFarmCalculator(int totalArea, int secondFarmWidth)
         {
@@ -34,10 +39,8 @@ namespace OldMcDonaldsFarm
                 {
                     return initialWidthFisrtSolution * initialWidthFisrtSolution;
                 }
-                else
-                {
-                    throw new IndexOutOfRangeException("Lenght is negative");
-                }
+                else throw new IndexOutOfRangeException("Lenght is negative");
+               
             }
             else if (deltaRoot == 0)
             {
@@ -46,7 +49,7 @@ namespace OldMcDonaldsFarm
             }
             else
             {
-                return 0;
+                 throw new IndexOutOfRangeException("Lenght is negative");
 
             }
 
