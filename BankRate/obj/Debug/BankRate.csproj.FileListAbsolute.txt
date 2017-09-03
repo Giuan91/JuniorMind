@@ -1,6 +1,0 @@
-D:\JuniorMind\JuniorMind\BankRate\bin\Debug\BankRate.dll
-D:\JuniorMind\JuniorMind\BankRate\bin\Debug\BankRate.pdb
-D:\JuniorMind\JuniorMind\BankRate\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-D:\JuniorMind\JuniorMind\BankRate\obj\Debug\BankRate.csprojResolveAssemblyReference.cache
-D:\JuniorMind\JuniorMind\BankRate\obj\Debug\BankRate.dll
-D:\JuniorMind\JuniorMind\BankRate\obj\Debug\BankRate.pdb
