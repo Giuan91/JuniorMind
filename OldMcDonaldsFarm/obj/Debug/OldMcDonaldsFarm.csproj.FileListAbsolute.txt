@@ -1,0 +1,6 @@
+D:\JuniorMind\JuniorMind\OldMcDonaldsFarm\bin\Debug\OldMcDonaldsFarm.dll
+D:\JuniorMind\JuniorMind\OldMcDonaldsFarm\bin\Debug\OldMcDonaldsFarm.pdb
+D:\JuniorMind\JuniorMind\OldMcDonaldsFarm\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\JuniorMind\JuniorMind\OldMcDonaldsFarm\obj\Debug\OldMcDonaldsFarm.csprojResolveAssemblyReference.cache
+D:\JuniorMind\JuniorMind\OldMcDonaldsFarm\obj\Debug\OldMcDonaldsFarm.dll
+D:\JuniorMind\JuniorMind\OldMcDonaldsFarm\obj\Debug\OldMcDonaldsFarm.pdb
