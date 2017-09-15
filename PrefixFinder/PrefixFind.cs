@@ -28,12 +28,19 @@ namespace PrefixFinder
         {
             int i = 0;
             int shortestLenght = Math.Min(phraseOne.Length, phraseTwo.Length);
+            string prefix = string.Empty;
+            /* while (phraseOne[i] == phraseTwo[i] && i < shortestLenght)
+             {
+                 i++;
+             }
+             string prefix = phraseOne.Substring(0, i); */
 
-            while (phraseOne[i] == phraseTwo[i] && i < shortestLenght)
-            {
-                i++;
-            }
-            string prefix = phraseOne.Substring(0, i);
+            for (i = 0; i < shortestLenght; i++)
+                if (phraseOne[i] != phraseTwo[i])
+                {
+                    prefix = phraseOne.Substring(0, i);
+                    break;
+                }
             return prefix;
         }
     }
