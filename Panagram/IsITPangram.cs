@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
+
 
 namespace Pangram
 {
@@ -21,7 +21,15 @@ namespace Pangram
 
         static bool Pangram( string phrase)
         {
-            return phrase.ToLower().Where(i => Char.IsLetter(i)).GroupBy(i => i).Count() == 26;
+            
+            phrase.ToLower();
+            for (char i = 'a'; i <= 'z'; i++)
+                if (phrase.IndexOf(i) == -1)
+                {
+                    return false;
+                }
+
+            return true;
         }
     }
 }
