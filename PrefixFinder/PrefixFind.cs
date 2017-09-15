@@ -18,10 +18,22 @@ namespace PrefixFinder
             StringAssert.StartsWith("aaa", PrefixFinder("aaab", "aaaaaabbaa"));
         }
 
+        [TestMethod]
+        public void TestMethod3()
+        {
+            StringAssert.StartsWith("bb", PrefixFinder("bb", "bbbccc"));
+        }
+
         string PrefixFinder(string phraseOne, string phraseTwo)
         {
             int i = 0;
-            while (phraseOne[i] == phraseTwo[i])
+            int shortestLenght = 0;
+
+            if (phraseOne.Length <= phraseTwo.Length)
+                shortestLenght = phraseOne.Length;
+            else shortestLenght = phraseTwo.Length;
+
+            while (phraseOne[i] == phraseTwo[i] && i < shortestLenght)
             {
                 i++;
             }
