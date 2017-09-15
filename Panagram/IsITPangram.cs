@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace Pangram
 {
@@ -12,10 +13,15 @@ namespace Pangram
             Assert.AreEqual(true, Pangram("The quick brown fox jumps over the lazy dog"));
         }
 
-
-        bool Pangram( string phrase)
+        [TestMethod]
+        public void Secondphrae()
         {
-            return false;
+            Assert.AreEqual(false, Pangram("This is not a pangram"));
+        }
+
+        static bool Pangram( string phrase)
+        {
+            return phrase.ToLower().Where(i => Char.IsLetter(i)).GroupBy(i => i).Count() == 26;
         }
     }
 }
