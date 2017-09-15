@@ -27,11 +27,7 @@ namespace PrefixFinder
         string PrefixFinder(string phraseOne, string phraseTwo)
         {
             int i = 0;
-            int shortestLenght = 0;
-
-            if (phraseOne.Length <= phraseTwo.Length)
-                shortestLenght = phraseOne.Length;
-            else shortestLenght = phraseTwo.Length;
+            int shortestLenght = Math.Min(phraseOne.Length, phraseTwo.Length);
 
             while (phraseOne[i] == phraseTwo[i] && i < shortestLenght)
             {
