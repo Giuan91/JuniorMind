@@ -22,7 +22,7 @@ namespace Pangram
         static bool Pangram( string phrase)
         {
             
-            phrase.ToLower();
+            
             for (char i = 'a'; i <= 'z'; i++)
                 if (phrase.IndexOf(i) == -1)
                 {
