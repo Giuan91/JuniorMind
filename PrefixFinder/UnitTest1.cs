@@ -9,12 +9,12 @@ namespace PrefixFinder
         [TestMethod]
         public void TestMethod1()
         {
-            CollectionAssert.AreEqual("semic", PrefixFinder());
+            StringAssert .StartsWith("semic", PrefixFinder("semiconductor", "semicolon"));
         }
 
-        string PrefixFinder(string prefix)
+        string PrefixFinder(string a, string b)
         {
-            return prefix;
+            return null;
         }
     }
 }
